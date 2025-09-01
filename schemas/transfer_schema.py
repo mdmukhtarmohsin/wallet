@@ -10,7 +10,6 @@ class TransferRequest(BaseModel):
 
 
 class TransferResponse(BaseModel):
-    transfer_id: str
     sender_transaction_id: int
     recipient_transaction_id: int
     amount: float = Field(ge=0)
@@ -24,7 +23,6 @@ class TransferErrorResponse(BaseModel):
     required_amount: float = Field(ge=0)
 
 class TransferDetailResponse(BaseModel):
-    transfer_id: str
     sender_user_id: int
     recipient_user_id: int
     amount: float = Field(ge=0)
